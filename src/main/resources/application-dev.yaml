@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    #配置上下文路径
+    context-path: /dataanalysis
+spring:
+  application:
+    name: dev
+  datasource:
+    url: jdbc:mysql://192.168.0.99:3306/bank?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+mybatis-plus:
+  mapper-locations: classpath*:/mappers/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
